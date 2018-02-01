@@ -1,4 +1,4 @@
-## Project Proposal Recruit Restaurant Visitor Forecasting
+## Project Proposal: Recruit Restaurant Visitor Forecasting
 
 Problem
 -------
