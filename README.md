@@ -1,5 +1,4 @@
 # DataScience
-==============
 
 This repo shares my Data Science portfolio.
 
