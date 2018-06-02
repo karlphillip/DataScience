@@ -123,8 +123,25 @@ def load_from(pwd):
     ### 4. Cleaning Data
     ###
 
-    # TODO handle NaN on reservations
+    # 4.7.1 NaN on string columns
+    df['area_name'].fillna(value='', inplace=True)
+    df['genre_name'].fillna(value='', inplace=True)
+
+    # 4.7.2 NaN on column air_store_id
+    df['air_store_id'].fillna(value='', inplace=True)
+
+    # 4.7.3 NaN on numeric columns
+    df['latitude'].fillna(value=-1, inplace=True)
+    df['longitude'].fillna(value=-1, inplace=True)
+
+    # 4.7.4 NaN on datetime columns: no need to do this anymore!
+    #df['reserve_datetime'].fillna(value=-9999, inplace=True)
+    #df['visit_datetime'].fillna(value=-9999, inplace=True)
+
+    # 4.7.5 NaN on reservations
+    df['reservations'].fillna(value=-1, inplace=True)
     
+    # Finish with 100% progress
     if (with_tqdm): 
         pbar.update(1) 
         pbar.close()
